@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Game {
     UI ui;
     List<BankAccount> bankAccounts;
+    //List<Player> players;
 
     public Game() {
         ui=new UI();
