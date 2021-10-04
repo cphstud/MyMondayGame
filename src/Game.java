@@ -2,11 +2,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Game {
-    Scanner scanner;
+    UI ui;
     List<BankAccount> bankAccounts;
 
     public Game() {
-        scanner = new Scanner(System.in);
+        ui=new UI();
     }
 
     public void runGame() {
@@ -25,8 +25,8 @@ public class Game {
 
         while(counter < numberOfAccounts) {
 
-            System.out.println("Indtast navn");
-            userInput=scanner.nextLine();
+            ui.getUserMenuItem(1);
+            userInput=ui.getUserAnswer();
             BankAccount ba = new BankAccount(userInput);
             bankAccounts.add(ba);
             counter++;
